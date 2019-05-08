@@ -11,12 +11,18 @@ listOfServersToBackup=readServerList()
 
 foreach(listOfServers =>(server){
   if(checkconnectToServer(server)){
-    mountServerForBackup(server)
-    mountDedicateResourceForBackup(server)
-    performServerSpecificBackup(server)
+    resource1=mountServerForBackup(server)
+    resource2=mountDedicateResourceForBackup(server)
+    performServerSpecificBackup(server,resource1,resource2)
   
   }else{
     actionOnBackupStatusFail(server)
   }
 }
 }// end foreach
+
+performServerSpecificBackup(server, sourceOfBackup, destinationOfBackup){
+      listOfResources=getListOfWhatisNeededToBackup(server)
+      callback=getBackupMethod(server);
+      backupstatus=getAndExecuteScriptFor(callback,listOfResources,resource1, resource2);
+}
