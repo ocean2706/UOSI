@@ -1,4 +1,4 @@
-#Challanges 
+# Challanges 
 
 - non-image based backup
 - efficient prep of sparse images
@@ -20,7 +20,7 @@
 - ...
 
 
-#Requirments/Deliverables
+# Requirments/Deliverables
 ## Input:
 - what data to backup
  The user must be able to see and exclude some data from backup. For example video files, iso images and other large data can be excluded from backup and only documents/configuration or scripts must be included in backup.
@@ -46,9 +46,9 @@
 - DR Test Plan/Procedure
 - ...
 
-#When is required to use image-based backup. 
+# When is required to use image-based backup. 
 ddrescue. See the rescue part. 
 
-#Similar tools:
+# Similar tools:
 https://github.com/tritonas00/system-tar-and-restore
 
